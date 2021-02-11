@@ -1,0 +1,79 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+	
+	
+		<action name="LoginButton" class="MyGrandkids" method="homeLogin">
+			<result name="SUCCESS">/login.jsp</result>
+		</action>
+		<action name="RegisterButton" class="MyGrandkids" method="homeRegister">
+			<result name="SUCCESS">/register.jsp</result>
+		</action>
+		
+		
+		
+		<action name="login" class="MyGrandkids" method="login">
+		<result name = "SUCCESS">/covid.jsp</result>
+		<result name = "FAILURE">/register.jsp</result>
+		</action>
+		
+		<action name="register" class="MyGrandkids" method="register">
+		<result name = "SUCCESS">/login.jsp</result>
+		<result name = "FAILURE">/register.jsp</result>
+		</action>
+		
+		
+		<action name="covid" class="MyGrandkids" method="covid">
+		<result name = "SUCCESS">/homePage.jsp</result>
+		<result name = "FAILURE">/error.jsp</result>
+		</action>
+		
+		<action name="ViewAllUsers" class="MyGrandkids" method="viewAllUsers">
+			<result name="SUCCESS">/viewAllUsers.jsp</result>
+		</action>
+		<action name="ViewFriends" class="MyGrandkids" method="viewFriends">
+			<result name="SUCCESS">/viewFriends.jsp</result>
+		</action>
+		
+		
+		<action name="AddPost" class="MyGrandkids" method="addPost">
+			<result name="SUCCESS">/homePage.jsp</result>
+			<result name="FAILURE">/error.jsp</result>
+		</action>
+		
+		<action name="AddComment" class="MyGrandkids" method="addComment">
+			<result name="SUCCESS">/homePage.jsp</result>
+			<result name="FAILURE">/error.jsp</result>
+		</action>
+		
+		<action name="AddPostFriend" class="MyGrandkids" method="addPost">
+			<result name="SUCCESS">/friend.jsp</result>
+			<result name="FAILURE">/error.jsp</result>
+		</action>
+		
+		<action name="AddCommentFriend" class="MyGrandkids" method="addComment">
+			<result name="SUCCESS">/friend.jsp</result>
+			<result name="FAILURE">/error.jsp</result>
+		</action>
+		
+		<action name="ChooseProfile" class="MyGrandkids" method="selectedUser">
+			<result name="FRIENDS">/friend.jsp</result>
+			<result name="NOTFRIENDS">/nonFriend.jsp</result>
+			<result name="FAILURE">/error.jsp</result>
+		</action>
+		
+		<action name="addFriend" class="MyGrandkids" method="addFriend">
+			<result name="SUCCESS">/friend.jsp</result>
+			<result name="FAILURE">/error.jsp</result>
+		</action>
+		
+		
+		<action name="logout" class="MyGrandkids" method="logout">
+			<result name="SUCCESS">/index.jsp</result>
+		</action>
+		
+    </package>
+</struts>
